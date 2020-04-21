@@ -1,0 +1,204 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Is anyone there?", "good day", "Whats up", "Hello"],
+      "responses": [
+        "Hello",
+        "Good to see you again!",
+        "Hi there, how can i help?"
+      ],
+      "context": ""
+    },
+    {
+      "tag": "covid",
+      "patterns": [
+        "Do I have covid-19?",
+        "how do i tell if i have corona virus",
+        "covid-19",
+        "coronavirus",
+        "i'm sick"
+      ],
+      "responses": [
+        "To check your symptoms refer to: https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/index.html#cdc-chat-bot-open"
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "covid-19 information",
+        "help",
+        "information",
+        "what can i do?"
+      ],
+      "responses": [
+        "Check out: https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home"
+      ]
+    },
+    {
+      "tag": "day query",
+      "patterns": [
+        "How are you today?",
+        "What you doing today?",
+        "How is your day?",
+        "What are you up to?",
+        "G'day"
+      ],
+      "responses": [
+        "My day is going swell! How about yours?",
+        "Thank you for asking! My day is great.",
+        "That's nice of you to ask, my day is outstanding",
+        "meh, could be better."
+      ],
+      "context_set": "dayQuery"
+    },
+    {
+      "tag": "good day response",
+      "patterns": [
+        "Good!",
+        "I'm doing pretty good",
+        "Great",
+        "pretty good",
+        "it's okay"
+      ],
+      "responses": [
+        "That's great!",
+        "Awesome! I'm glad your day is going well",
+        "Sweet!"
+      ],
+      "context_filter": "dayQuery"
+    },
+    {
+      "tag": "bad day response",
+      "patterns": [
+        "Bad!",
+        "Not good",
+        "terrible",
+        "pretty bad",
+        "it's not that great"
+      ],
+      "responses": [
+        "Aww, I'm sorry to hear that!",
+        "Well that sucks!",
+        "muwahaha, good!"
+      ],
+      "context_filter": "dayQuery"
+    },
+    {
+      "tag": "name query",
+      "patterns": [
+        "What is your name?",
+        "Who are you?",
+        "Who made you?",
+        "name",
+        "What are you?"
+      ],
+      "responses": [
+        "My name is Stephen.",
+        "I can't believe you don't know... My name is Stephen!",
+        "I was built by Stephen, therefor I am Stephen",
+        "What else could it be, Stephen of course!",
+        "I am a COVID-19 chat bot named Stephen!"
+      ]
+    },
+    {
+      "tag": "purpose",
+      "patterns": [
+        "What is your purpose?",
+        "Purpose?"
+      ],
+      "responses": [
+        "My purpose? Well, I was built to provide generalized information on the COVID-19 epidemic. Try asking 'How to prevent catching COVID-19?'"
+      ]
+    },
+    {
+      "tag": "prevention",
+      "patterns": [
+        "Prevention",
+        "How to prevent catching COVID-19?",
+        "How do i protect myself from getting Coronavirus?"
+      ],
+      "responses": [
+        "The easiest way to prevent contraction is: (1) Stay (2) Keep (3) Wash (4) Cover (5) Sick"
+      ],
+      "context_set": "prevention"
+    },
+    {
+      "tag": "stay",
+      "patterns": [
+        "elaborate Stay at home?",
+        "Stay",
+        "1"
+      ],
+      "responses": [
+        "Stay at home and self-isolate from others in the household if you feel unwell\nOnly leave your home if you need food or other essential items/services"
+      ],
+      "context_filter": "prevention",
+      "context": "prevention"
+    },
+    {
+      "tag": "keep",
+      "patterns": [
+        "elaborate Keep a safe distance?",
+        "Keep",
+        "2"
+      ],
+      "responses": [
+        "Avoid close contact (6 feet) with people who are unwell, but generally all other people"
+      ],
+      "context_filter": "prevention"
+    },
+    {
+      "tag": "wash",
+      "patterns": [
+        "elaborate wash your hands",
+        "wash",
+        "3"
+      ],
+      "responses": [
+        "Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub"
+      ],
+      "context_filter": "prevention"
+    },
+    {
+      "tag": "cover",
+      "patterns": [
+        "elaborate cover your cough",
+        "cover",
+        "4"
+      ],
+      "responses": [
+        "Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze"
+      ],
+      "context_filter": "prevention"
+    },
+    {
+      "tag": "sick",
+      "patterns": [
+        "elaborate call first",
+        "sick",
+        "5"
+      ],
+      "responses": [
+        "Call the hospital and let them know your coming, or your doctors office if you plan a visit."
+      ],
+      "context_filter": "prevention"
+    },
+    {
+      "tag": "here",
+      "patterns": [
+        "Yes I'm still here",
+        "im still here",
+        "are you there?",
+        "yeah",
+        "yep",
+        "yes"
+      ],
+      "responses": [
+        "Great, Make sure to ask questions!"
+      ],
+      "context_filter": "here",
+      "context_set": "here"
+    }
+  ]
+}
